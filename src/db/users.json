@@ -1,0 +1,61 @@
+[
+  {
+    "id": 1,
+    "nombre": "asfasf",
+    "apellido": "asfs",
+    "email": "asa@asas.com",
+    "password": "$2a$10$FLUHOBtWhSnrJYT8xBll7erFc88wW3N0qMr0wNzcpfW/T9x51pSkG",
+    "submit": "Registrarse",
+    "image": "user-1658450025261.jpg"
+  },
+  {
+    "id": 2,
+    "nombre": "safasf",
+    "apellido": "sfaf",
+    "email": "as@as.com",
+    "password": "$2a$10$mKQWK2FxYn6ErQp6NajLH.Q/T6X3SwfnZ6d.xVoDUYXY.yu0/qILW",
+    "submit": "Registrarse",
+    "image": "user-1658450056266.jpg"
+  },
+  {
+    "id": 3,
+    "nombre": "sdasda",
+    "apellido": "asdasd",
+    "email": "juan@gmail.com",
+    "password": "$2a$10$qYQdFGhw.uGdDV4bE80Sc.d04v7BQmeUhVPIUfNWzW7oK6EQaeN8m",
+    "submit": "Registrarse",
+    "image": "user-1658450450033.jpg"
+  },
+  {
+    "id": 4,
+    "nombre": "fsafasf",
+    "apellido": "asfas",
+    "email": "joac@gmail.com",
+    "password": "$2a$10$6PT8LiJFGFcfGDUaQUzSCuLtbOoI6b3oSqpnxH.6yQTBhyOTj7Fgy",
+    "image": "user-1658450999652.jpg"
+  },
+  {
+    "id": 5,
+    "nombre": "Juanito",
+    "apellido": "Reyes",
+    "email": "juanreyes@gmail.com",
+    "password": "$2a$10$VthibJnOY80alhjqKmIymu08bXToyGJwr.3v8ksna0nqP8ECtCVJm",
+    "image": "user-1658530391022.jpg"
+  },
+  {
+    "id": 6,
+    "nombre": "Emi",
+    "apellido": "baglkio",
+    "email": "emi@emi.com",
+    "password": "$2a$10$XjKlP2NpOLvMqNgGMF1yNeEp7o2ozItIE9h.ToQDnli2tjB8wIC5K",
+    "image": "user-1659674781035.jpg"
+  },
+  {
+    "id": 7,
+    "nombre": "fac",
+    "apellido": "fac",
+    "email": "fac@fac.com",
+    "password": "$2a$10$sEdVfQo/c06gZ36aze0W2eXTfvXc.drYyZQ3PYj9rBUukTu0iJt6i",
+    "image": "user-1660847630973.png"
+  }
+]

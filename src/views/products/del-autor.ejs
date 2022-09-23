@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include("../parcials/head", {stylesheet: ["stylehome", "del-autor"]}) %>
+
+    <body>
+        <%- include("../parcials/header"); %>
+        <main>
+            <h3 class="autor-fullname"><%= autor.fullname %></h3>
+            <div class="forEach-ebook">
+                <% for(let i=0; i < ebooksAutor.length; i++){ %>
+                    <article>
+                         <div class="box-list">
+                              <a href="/products/<%= ebooksAutor[i].id %>"><img src="/img/products/<%= ebooksAutor[i].imagen %>" alt="<%= ebooksAutor[i].titulo %>" class="imagen-ebook"></a>
+                               <p class="ebook-title"><%= ebooksAutor[i].titulo %></p>
+                         </div>
+                    </article>
+                <% } %>
+            </div>
+        </main>
+            <%- include("../parcials/footer"); %>
+    </body>
+
+</html>

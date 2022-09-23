@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include("../parcials/head.ejs", { stylesheet: ["stylehome", "style_register" ]}); %>
+
+  <body>
+    <%- include("../parcials/header.ejs"); %>
+      <main class="main-register">
+        <section class="form-register">
+          <form action="/users/editarPass/<%= user.id %>" method="post" class="register">
+            <div class="contenedor">
+              <div class="box-form-1">
+                <h5>CAMBIÁ TU CONTRASEÑA</h5>
+                <div class="box">
+                  <p class="textos">Contraseña Actual</p>
+                  <input class="completar" type="password" name="actualPass" value="">
+                  <% if (locals.errors && errors.actualPass) { %>
+                    <div class="invalid-feedback">
+                      <%= errors.actualPass.msg %>
+                    </div>
+                    <% } %>
+                </div>
+                <div class="box">
+                  <p class="textos">Nueva Contraseña</p>
+                  <input class="completar" type="password" name="newPass" value="">
+                  <% if (locals.errors && errors.newPass) { %>
+                    <div class="invalid-feedback">
+                      <%= errors.newPass.msg %>
+                    </div>
+                    <% } %>
+                </div>
+                <div class="box">
+                  <p class="textos">Repetí Contraseña</p>
+                  <input class="completar" type="password" name="confNewPass" value="">
+                  <% if (locals.errors && errors.confNewPass) { %>
+                    <div class="invalid-feedback">
+                      <%= errors.confNewPass.msg %>
+                    </div>
+                    <% } %>
+                </div>
+            <div class="box-form-3">
+              <div>
+                <input class="button" type="submit" value="Confirmar cambios">
+              </div>
+            </div>
+          </form>
+        </section>
+      </main>
+      <%- include("../parcials/footer.ejs"); %>
+  </body>
+
+</html>

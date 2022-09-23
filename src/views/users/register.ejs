@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include("../parcials/head.ejs", { stylesheet: ["stylehome", "style_register" ]}); %>
+
+  <body>
+    <%- include("../parcials/header.ejs"); %>
+    <!-- <script src="/js/validateRegisterFront.js"></script> -->
+      <main class="main-register">
+        <section class="form-register">
+          <div id="error" class="invalid-feedback"></div>
+          <form action="/users/store" method="post" class="register" id="form" enctype="multipart/form-data">
+            <div class="contenedor">
+              <div class="box-form-1">
+                <h5>CREA TU CUENTA</h5>
+                <div class="box">
+                <p class="textos">Nombre</p>
+                  <input class="completar" type="text" name="nombre" id="nombre" value="<%= locals.oldData ? oldData.nombre : null %>">
+                  <div id="nombreError" class="invalid-feedback"></div>
+                  <% if (locals.errors && errors.nombre) { %>
+                     <div class="invalid-feedback">
+                      <%= errors.nombre.msg %>
+                     </div>
+                      <% } %>
+                </div>
+                <div class="box">
+                <p class="textos">Apellido</p>
+                  <input class="completar" type="text" name="apellido" id="apellido" value="<%= locals.oldData ? oldData.apellido : null %>">
+                  <div id="apellidoError" class="invalid-feedback"></div>
+                  <% if (locals.errors && errors.apellido) { %>
+                    <div class="invalid-feedback">
+                      <%= errors.apellido.msg %>
+                    </div>
+                    <% } %>
+                </div>
+                <div class="box">
+                <p class="textos">Email</p>
+                  <input class="completar" type="text" name="email" id="email" value="<%= locals.oldData ? oldData.email : null %>" placeholder="ejemplo@ejemplo.com">
+                  <div id="emailError" class="invalid-feedback"></div>
+                  <% if (locals.errors && errors.email) { %>
+                    <div class="invalid-feedback">
+                      <%= errors.email.msg %>
+                    </div>
+                    <% } %>
+                    <% if (locals.mensajeError) { %>
+                      <div class="invalid-feedback">
+                        <%= mensajeError %>
+                      </div>
+                      <% } %>
+                </div>
+                <div class="box">
+                <p class="textos">Contraseña</p>
+                  <input class="completar" type="password" name="password" id="password" value="" placeholder="Mínimo 8 caracteres">
+                  <div id="passwordError" class="invalid-feedback"></div>
+                  <% if (locals.errors && errors.password) { %>
+                    <div class="invalid-feedback">
+                      <%= errors.password.msg %>
+                    </div>
+                    <% } %>
+                </div>
+              </div>
+              <div class="box-form-2">
+                <div class="div-foto">
+                  <p class="textos">FOTO DE PERFIL</p>
+                  <img src="/img/users/image-default.jpg" alt="image-avatar" class="user-avatar" id="imageBox">
+                  <div id="imageBox"></div>
+                  <input type="file" name="imagen" id="image">
+                  <div id="imageError" class="invalid-feedback"></div>
+                  <% if (locals.errors && errors.imagen) { %>
+                    <div class="img-error">
+                      <%= errors.imagen.msg %>
+                    </div>
+                    <% } %>
+                </div>
+              </div>
+            </div>
+            <div class="box-form-3">
+              <div>
+                <input class="button" type="submit" value="Registrarse">
+              </div>
+              <div>
+                <p>¿Ya tenés cuenta? <a class="link" href="/users/login">Inicia sesión</a></p>
+              </div>
+            </div>
+          </form>
+        </section>
+      </main>
+      <section class="news">
+        <form action="" method="">
+          <label for="name" class="novedades">Novedades</label>
+          <div class="send-email">
+            <input type="text" placeholder="Nombre" id="name" class="name">
+            <input type="email" placeholder="Escribi tu email" class="email">
+            <button type="submit"><i class="fas fa-arrow-right"></i></button>
+          </div>
+        </form>
+      </section>
+      <%- include("../parcials/footer.ejs"); %>
+      <script src="/js/validateRegisterFront.js"></script>
+  </body>
+
+</html>

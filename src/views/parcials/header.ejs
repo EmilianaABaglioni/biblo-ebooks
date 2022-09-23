@@ -1,0 +1,46 @@
+<header>
+    <div class="top-header">
+      <div class="burger">
+        <form action="" method="">
+          <button type="menu" class="button-burger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </button>
+        </form>
+      </div>
+      <div class="search-top">
+        <form action="/products/find" method="post">
+          <input type="text" placeholder="Buscar por título" name="buscador" id="buscador">
+          <button type="submit"><i class="fas fa-search"></i></button>
+        </form>
+      </div>
+      <a href="/"><img src="/img/vistas/logo.jpg" alt="logo" class="logo"></a>
+    </div>
+    <div class="bottom-header">
+      <div class="search-bottom">
+        <form action="/products/find" method="post">
+          <input type="text" placeholder="Buscar por título" size="15" name="buscador" id="buscador">
+          <button type="submit"><i class="fas fa-search"></i></button>
+        </form>
+      </div>
+      <nav class="bottom-nav">
+        <ul>
+          <% if(locals.isLogged) { %>
+            <li><a href="/users/perfil/<%= locals.userLogged.id %>" class="profile-box"><img class='profile' src="/img/users/<%= locals.userLogged.avatar %>" alt=""><%= locals.userLogged.nombre %></a></li>
+            <% } else { %>
+              <li><a href="/users/register">Creá tu cuenta</a></li>
+              <li><a href="/users/login">Iniciar sesión</a></li>
+              <% } %>
+              <li><i class="fas fa-shopping-cart"></i><a href="/users/carrito">Ebooks</a></li>
+            <% if (locals.isLogged) { %>
+              <li>
+                <form action="/users/logout" method="get">
+                  <button type="submit" class="logout" style="cursor: pointer"><i class="fas fa-sign-out-alt"></i></button>
+                </form>
+              </li>
+            <% } %>
+        </ul>
+      </nav>
+    </div>
+  </header>

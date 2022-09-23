@@ -1,0 +1,213 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+main {
+  width: 100%;
+  padding: 15px 0;
+  box-shadow: inset;
+  margin: 0;
+}
+
+main section {
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.box-producto {
+  width: 70%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.container-producto {
+  width: 95%;
+  padding: 10px 0;
+  margin: 15px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--bggrey);
+  flex-wrap: wrap;
+}
+
+.container-producto img {
+  width: 60%;
+  margin: 20px 0px;
+}
+
+.info-y-link {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+.informacion-producto {
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 30px 15px;
+  background-color: white;
+  border-radius: 20px 0 20px 0;
+  color: var(--fontcolor);
+}
+
+.titulo {
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+  margin: 0;
+  padding-bottom: 10px;
+  font-family: 'Yeseva One', cursive;
+}
+
+.desc {
+  text-align: center;
+  padding: 0 10px;
+  font-size: 12px;
+  font-weight: 200;
+  font-family: 'Roboto', sans-serif;
+}
+
+.data-prod {
+  width: 100%;
+  font-size: 12px;
+  font-weight: 200;
+  padding-left: 10px;
+  text-align: center;
+  font-family: 'Yeseva One', cursive;
+}
+
+.price {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: 900;
+  text-align: center;
+}
+
+#otros-libros {
+  margin: 15px 0;
+}
+
+.butt-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+}
+
+.butt-container a {
+  width: 200px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 200;
+}
+
+.buy-now-button {
+  background-color: var(--bgdark);
+  color: #e6eaed;
+  padding: 10px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.action-button {
+  border: none;
+  border-radius: 8px;
+  color: #ffffff;
+  padding: 10px 20px;
+}
+
+.action-button.edit {
+  background-color: lightblue;
+  text-decoration: none;
+}
+
+.action-button.delete {
+  font-size: 12px;
+  background-color: rgb(233, 98, 74);
+}
+
+.action-button.edit:hover,
+.buy-now-button:hover,
+.action-button.delete:hover {
+  font-size: 13px;
+  background-color: var(--hovercolor);
+  font-weight: 700;
+}
+
+.ver-otros {
+  text-decoration: none;
+  font-size: 13px;
+  color: var(--fontcolor);
+  cursor: pointer;
+  border-radius: 20px;
+  border: solid 1px var(--fontcolor);
+  padding: 7px 10px;
+  text-align: center;
+  background-color: white;
+  margin: 50px 0px;
+  transition: all 350ms;
+  font-weight: 200;
+}
+
+.ver-otros:hover {
+  font-size: 14px;
+  background-color: var(--hovercolor);
+  font-weight: 700;
+  color: white;
+}
+
+@media (min-width: 481px) {
+  .box-producto {
+    justify-content: space-between;
+    width: 80%;
+  }
+
+  .container-producto {
+    width: 85%;
+  }
+
+  .container-producto img {
+    width: 30%;
+    max-width: 190px;
+    max-height: 300px;
+    align-self: flex-start;
+  }
+
+  .info-y-link {
+    width: 70%;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    margin-top: 15px;
+  }
+
+  .butt-container {
+    align-items: flex-end;
+  }
+
+  .butt-container a,
+  .butt-container form {
+    margin: 10px 0px;
+  }
+
+  .desc {
+    text-align: center;
+  }
+
+  .price {
+    font-size: 16px;
+    text-align: end;
+  }
+  
+  .data-prod {
+    font-size: 12px;
+    text-align: start;
+  }
+}

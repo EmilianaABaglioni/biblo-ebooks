@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include("./parcials/head", {stylesheet: ["stylehome"]}) %>
+
+  <body>
+    <%- include("./parcials/header"); %>
+        <main>
+          <div class="top">
+          <section id="destacado">
+            <h4>D E S T A C A D O</h4>
+            <article>
+              <% for(let i=0; i < productos.length; i++){ %>
+                <% if(productos[i].id_categoria == 4 ){ %>
+                  <div class="destacado">
+                    <a href="/products/<%= productos[i].id %>"><img src="/img/products/<%= productos[i].imagen %>"
+                        alt="<%= productos[i].titulo %>"></a>
+                    <p class="title-destacado">
+                      <%= productos[i].titulo %>
+                    </p>
+                    <p class="price">
+                     $ <%= productos[i].precio %>
+                    </p>
+                    <p class="description">
+                      <%= productos[i].descripcion %>
+                    </p>
+                  </div>
+                  <% } %>
+                    <% } %>
+            </article>
+          </section>
+          <section class="box-top">
+            <div class="top-section">
+              <h3><a href="/products/bestsellers">Bestsellers</a></h3>
+              <% for(let i=0; i < bestseller.length; i++){ %>
+                  <article>
+                    <a href="/products/<%= bestseller[i].id %>"><img src="/img/products/<%= bestseller[i].imagen %>"
+                        alt="<%= bestseller[i].titulo %>"></a>
+                    <div class="box-book">
+                      <p class="title">
+                        <%= bestseller[i].titulo %>
+                      </p>
+                      <p class="price">
+                       $ <%= bestseller[i].precio %>
+                      </p>
+                      <p class="book-description">
+                        <%= bestseller[i].descripcion %>
+                      </p>
+                    </div>
+                  </article>
+                  <% } %>
+            </div>
+          </section>
+        </div>
+          <section class="box-bottom">
+            <div class="bottom-section">
+              <h3><a href="/products/nuevos-lanzamientos">Nuevos Lanzamientos</a></h3>
+              <% for(let i=0; i < nuevosLanzamientos.length; i++){ %>
+                <% if(nuevosLanzamientos[i].id_categoria == 3 ){ %>
+                  <article>
+                    <a href="/products/<%= nuevosLanzamientos[i].id %>"><img src="/img/products/<%= nuevosLanzamientos[i].imagen %>"
+                        alt="<%= nuevosLanzamientos[i].titulo %>"></a>
+                    <div class="box-book">
+                      <p class="title">
+                        <%= nuevosLanzamientos[i].titulo %>
+                      </p>
+                      <p class="price">
+                        $ <%= nuevosLanzamientos[i].precio %>
+                      </p>
+                      <p class="book-description">
+                        <%= nuevosLanzamientos[i].descripcion %>
+                      </p>
+                    </div>
+                  </article>
+                  <% } %>
+                    <% } %>
+            </div>
+          </section>
+        </main>
+        <%- include("./parcials/roulette"); %>
+        <section class="news">
+          <form action="" method="">
+            <label for="name" class="novedades">Novedades</label>
+            <div class="send-email">
+              <input type="text" placeholder="Nombre" id="name" class="name">
+              <input type="email" placeholder="Escribi tu email" class="email">
+              <button type="submit"><i class="fas fa-arrow-right"></i></button>
+            </div>
+          </form>
+        </section>
+        <%- include("./parcials/footer"); %>
+  </body>
+
+</html>

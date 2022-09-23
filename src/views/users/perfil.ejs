@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("../parcials/head.ejs", {stylesheet: ["stylehome", "style_login" , "profile" ]}); %>
+
+  <body>
+    <%- include("../parcials/header.ejs"); %>
+      <main class="profile-main">
+          <div class="box-perfil">
+            <div class="image-conteiner" >
+              <div class="box-imagen">
+                <div>
+                  <img src="/img/users/<%= user.avatar %>" class="image-profile">
+                </div>
+                <div>
+                  <a href="/users/editarAvatar/<%= user.id %>" class="edit-image"><i class="fas fa-edit"></i>Editar</a>
+                </div>
+              </div>
+            </div>
+            <div class="data-conteiner">
+              <div class="data-user">
+                <h4 class="user-name"><%= `${user.nombre} ${user.apellido}` %></h4>
+                <p class="user-email">Email: <a href="mailto:<%= user.email %>" class="mail"><%= user.email %></a></p>
+              </div>
+              <div class="edit-list">
+                <ul>
+                  <li>
+                    <a href="/users/editarUser/<%= user.id %>"><i class="fas fa-edit"></i> Editar perfil</a>
+                  </li>
+                  <li>
+                    <a href="/users/editarPass/<%= user.id %>"><i class="fas fa-edit"></i></i> Editar contraseña</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="admin-list">
+                <% if(user.id_rol==2){ %>
+                  <p class="text-adm">Administrador</p>
+                  <ul class="edit-adm-list">
+                    <li class="list-adm"><a href="/users/users-list/">Listado de usuarios</a></li>
+                    <li class="list-adm"><a href="/products/allbooks">Listado de productos</a></li>
+                    <li class="list-adm"><a href="/products/create">Crear producto</a></li>
+                  </ul>
+                  <% } %>
+                </div>
+            </div>
+          </div>
+      </main>
+      <%- include("../parcials/footer.ejs"); %>
+  </body>
+
+</html>

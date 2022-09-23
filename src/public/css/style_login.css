@@ -1,0 +1,125 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+:root {
+    --bgdark: #08344F;
+    --icon: #204860;
+    --bgicons: #d7d5d580;
+    --bggrey: #e6eaed;
+    --destacado: #e6eaed;
+    --fontcolor: #5d676e;
+    --fontcolordark: #204860;
+    --bgmain: white;
+    --bgroulette: #e6eaed;
+    --hovercolor: #b0bec5;
+    --title: black;
+    --footerfont: #204860;
+    --footerbg: #e6eaed;
+}
+
+h5 {
+    font-family: 'Staatliches', cursive;
+    font-size: 34px;
+    margin: auto;
+    color: var(--fontcolor);
+    padding: 15px;
+}
+
+.login {
+    background-color: white;
+    padding: 25px 20px 65px 20px;
+}
+
+.form-login {
+    width: 90%;
+    background-color: var(--destacado);
+    margin: auto;
+}
+
+.box-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.143);
+    border-radius: 4px;
+}
+
+.completar {
+    margin: 10px 0;
+    background-color: white;
+    border: solid 3px var(--fontcolor);
+}
+
+.completar i {
+    padding: 12px;
+    background-color: white;
+    color: var(--fontcolor);
+    margin: 0;
+}
+
+.completar input {
+    border: none;
+    font-family: 'Roboto', serif;
+    font-weight: 200;
+    margin: 0;
+    padding: 10px;
+    font-size: 12px;
+}
+
+.invalid-feedback {
+    color: red;
+    font-weight: 200;
+    font-family: 'Roboto', serif;
+    font-size: 11px;
+    text-align: center;
+  }
+
+.error {
+    font-family: 'Staatliches', cursive;
+}
+
+.recordame {
+    margin: 10px;
+}
+
+.recordame label {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--fontcolor);
+}
+
+.boton input  {
+    font-size: 16px;
+    width: 130px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.637);
+    border: solid 1px #06293f3c;
+    border-radius: 5px;
+    font-family: 'Staatliches', cursive;
+    color: var(--fontcolor);
+}
+
+.boton input:hover {
+    font-size: 18px;
+    transition-duration: 900ms;
+    transform-style: flat;
+    color: white;
+    background-color: var(--hovercolor)
+}
+
+.links p {
+    text-align: center;
+}
+
+.links p a {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--fontcolor);
+}
+
+@media (min-width: 481px) {
+    .form-login {
+        max-width: 50%;
+    }
+}

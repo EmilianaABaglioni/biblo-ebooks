@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include("../parcials/head.ejs", { stylesheet: ["stylehome", "style_register" ]}); %>
+
+  <body>
+    <%- include("../parcials/header.ejs"); %>
+      <main class="main-register">
+        <section class="form-register">
+          <form action="/users/editarUser/<%= user.id %>" method="post" class="register">
+            <div class="contenedor">
+              <div class="box-form-1">
+                <h5>EDITA TU PERFIL</h5>
+                <div class="box">
+                  <p class="textos">Nombre</p>
+                  <input class="completar" type="text" name="nombre"
+                    value="<%= locals.oldData ? oldData.nombre : user.nombre %>">
+                  <% if (locals.errors && errors.nombre) { %>
+                    <div class="invalid-feedback">
+                      <%= errors.nombre.msg %>
+                    </div>
+                    <% } %>
+                </div>
+                <div class="box">
+                  <p class="textos">Apellido</p>
+                  <input class="completar" type="text" name="apellido"
+                    value="<%= locals.oldData ? oldData.apellido : user.apellido %>">
+                  <% if (locals.errors && errors.apellido) { %>
+                    <div class="invalid-feedback">
+                      <%= errors.apellido.msg %>
+                    </div>
+                    <% } %>
+                </div>
+                <div class="box">
+                  <p class="textos">Email</p>
+                  <input class="completar" type="text" name="email" value="<%= locals.oldData ? oldData.email : user.email %>">
+                  <% if (locals.errors && errors.email) { %>
+                    <div class="invalid-feedback">
+                      <%= errors.email.msg %>
+                    </div>
+                    <% } %>
+                  <% if (locals.mensajeError) { %>
+                    <div class="invalid-feedback">
+                      <%= mensajeError %>
+                    </div>
+                    <% } %>
+                </div>
+            <div class="box-form-3">
+              <div>
+                <input class="button" type="submit" value="Confirmar">
+              </div>
+            </div>
+          </form>
+        </section>
+      </main>
+      <%- include("../parcials/footer.ejs"); %>
+  </body>
+
+</html>
